@@ -75,7 +75,23 @@ html.br-booting #salon-mobile,html.br-booting #salon-desktop-v1{visibility:hidde
    const name=(site.salon?.name?.ru||site.salon?.name?.en||site.salon?.name||'TANEM');
    const logo=intro.querySelector('img');
    if(site.media?.logo){intro.classList.add('has-client-logo');logo.src=site.media.logo;logo.alt=name;}
-   else if(logo){const text=document.createElement('strong');text.className='br-intro-name '+(desktop?'is-desktop':'is-mobile');text.textContent=name;logo.replaceWith(text);}
+    else if(logo){
+      const text=document.createElement('strong');
+      text.className='br-intro-name '+(desktop?'is-desktop':'is-mobile');
+      if(/^7(?:\s|$)/u.test(String(name||''))){
+        const clean=String(name).replace(/\s+/g,' ').trim();
+        const seven=document.createElement('span');
+        seven.className='br-seven-optical';
+        seven.textContent='7';
+        seven.style.display='inline-block';
+        seven.style.transform='translateY(-0.22em)';
+        seven.style.font='inherit';
+        seven.style.letterSpacing='inherit';
+        text.style.whiteSpace='nowrap';
+        text.replaceChildren(seven,document.createTextNode('\u00A0'+clean.replace(/^7\s*/u,'')));
+      }else text.textContent=name;
+      logo.replaceWith(text);
+    }
  }
  let closed=false,shown=false,readyTimer=0;
  function showApp(){
