@@ -1155,13 +1155,8 @@
     return (master.cats||[]).flatMap(cat=>(SERVICE_DATA[cat]||[]).map(item=>({cat,item})));
   }
   function desktopMasterAbout(master){
-    const map={
-      nails:'Маникюр и педикюр. Аккуратная работа и внимание к деталям.',
-      hair:'Стрижки, окрашивание, укладки и уход за волосами.',
-      cosmetology:'Косметология и профессиональный уход за кожей.',
-      brows:'Брови и ресницы — форма, ламинирование и уход.'
-    };
-    return map[master.id]||'Описание специалиста.';
+    const copy=String(master.about||'').trim();
+    return copy||'Информация о мастере появится после подтверждения салоном.';
   }
   function paintDesktopMasterTab(){
     const target=masterPageContent.querySelector('.std-master-tab-content');

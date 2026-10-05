@@ -62,10 +62,24 @@
   },
   "schedule": {
     "timezone": "Europe/Moscow",
-    "periods": [],
+    "periods": [
+      {
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "open": "10:00",
+        "close": "21:00"
+      }
+    ],
     "fallback": {
-      "ru": "График уточняйте у салона",
-      "en": "Please confirm opening hours with the salon",
+      "ru": "Ежедневно 10:00–21:00",
+      "en": "Daily 10:00–21:00",
       "hy": "",
       "uz": "",
       "tg": ""
@@ -104,8 +118,8 @@
       {
         "src": "hero.webp",
         "alt": {
-          "ru": "Фото салона «7 Небо»",
-          "en": "7 Nebo salon photo",
+          "ru": "Интерьер салона «7 Небо»",
+          "en": "7 Nebo salon interior",
           "hy": "",
           "uz": "",
           "tg": ""
@@ -117,18 +131,8 @@
       {
         "src": "gallery-01.webp",
         "alt": {
-          "ru": "Фото салона «7 Небо»",
-          "en": "7 Nebo salon photo",
-          "hy": "",
-          "uz": "",
-          "tg": ""
-        }
-      },
-      {
-        "src": "gallery-02.webp",
-        "alt": {
-          "ru": "Фото салона «7 Небо»",
-          "en": "7 Nebo salon photo",
+          "ru": "Окрашивание волос",
+          "en": "Hair coloring",
           "hy": "",
           "uz": "",
           "tg": ""
@@ -137,8 +141,8 @@
       {
         "src": "gallery-03.webp",
         "alt": {
-          "ru": "Фото салона «7 Небо»",
-          "en": "7 Nebo salon photo",
+          "ru": "Окрашивание волос",
+          "en": "Hair coloring",
           "hy": "",
           "uz": "",
           "tg": ""
@@ -147,28 +151,8 @@
       {
         "src": "gallery-04.webp",
         "alt": {
-          "ru": "Фото салона «7 Небо»",
-          "en": "7 Nebo salon photo",
-          "hy": "",
-          "uz": "",
-          "tg": ""
-        }
-      },
-      {
-        "src": "gallery-05.webp",
-        "alt": {
-          "ru": "Фото салона «7 Небо»",
-          "en": "7 Nebo salon photo",
-          "hy": "",
-          "uz": "",
-          "tg": ""
-        }
-      },
-      {
-        "src": "gallery-06.webp",
-        "alt": {
-          "ru": "Фото салона «7 Небо»",
-          "en": "7 Nebo salon photo",
+          "ru": "Укладка волос",
+          "en": "Hair styling",
           "hy": "",
           "uz": "",
           "tg": ""
@@ -177,8 +161,38 @@
       {
         "src": "gallery-07.webp",
         "alt": {
-          "ru": "Фото салона «7 Небо»",
-          "en": "7 Nebo salon photo",
+          "ru": "Маникюр",
+          "en": "Manicure",
+          "hy": "",
+          "uz": "",
+          "tg": ""
+        }
+      },
+      {
+        "src": "gallery-13.webp",
+        "alt": {
+          "ru": "Маникюр",
+          "en": "Manicure",
+          "hy": "",
+          "uz": "",
+          "tg": ""
+        }
+      },
+      {
+        "src": "gallery-14.webp",
+        "alt": {
+          "ru": "Косметология",
+          "en": "Cosmetology",
+          "hy": "",
+          "uz": "",
+          "tg": ""
+        }
+      },
+      {
+        "src": "gallery-19.webp",
+        "alt": {
+          "ru": "Маникюр",
+          "en": "Manicure",
           "hy": "",
           "uz": "",
           "tg": ""
@@ -188,70 +202,10 @@
     "gallery": {
       "Салон": [
         {
-          "src": "gallery-01.webp",
-          "alt": {
-            "ru": "Фото салона «7 Небо»",
-            "en": "7 Nebo salon photo",
-            "hy": "",
-            "uz": "",
-            "tg": ""
-          }
-        },
-        {
-          "src": "gallery-02.webp",
-          "alt": {
-            "ru": "Фото салона «7 Небо»",
-            "en": "7 Nebo salon photo",
-            "hy": "",
-            "uz": "",
-            "tg": ""
-          }
-        },
-        {
-          "src": "gallery-03.webp",
-          "alt": {
-            "ru": "Фото салона «7 Небо»",
-            "en": "7 Nebo salon photo",
-            "hy": "",
-            "uz": "",
-            "tg": ""
-          }
-        },
-        {
-          "src": "gallery-04.webp",
-          "alt": {
-            "ru": "Фото салона «7 Небо»",
-            "en": "7 Nebo salon photo",
-            "hy": "",
-            "uz": "",
-            "tg": ""
-          }
-        },
-        {
           "src": "gallery-05.webp",
           "alt": {
-            "ru": "Фото салона «7 Небо»",
-            "en": "7 Nebo salon photo",
-            "hy": "",
-            "uz": "",
-            "tg": ""
-          }
-        },
-        {
-          "src": "gallery-06.webp",
-          "alt": {
-            "ru": "Фото салона «7 Небо»",
-            "en": "7 Nebo salon photo",
-            "hy": "",
-            "uz": "",
-            "tg": ""
-          }
-        },
-        {
-          "src": "gallery-07.webp",
-          "alt": {
-            "ru": "Фото салона «7 Небо»",
-            "en": "7 Nebo salon photo",
+            "ru": "Интерьер салона",
+            "en": "Salon interior",
             "hy": "",
             "uz": "",
             "tg": ""
@@ -260,18 +214,8 @@
         {
           "src": "gallery-08.webp",
           "alt": {
-            "ru": "Фото салона «7 Небо»",
-            "en": "7 Nebo salon photo",
-            "hy": "",
-            "uz": "",
-            "tg": ""
-          }
-        },
-        {
-          "src": "gallery-09.webp",
-          "alt": {
-            "ru": "Фото салона «7 Небо»",
-            "en": "7 Nebo salon photo",
+            "ru": "Зона ожидания салона",
+            "en": "Salon waiting area",
             "hy": "",
             "uz": "",
             "tg": ""
@@ -280,18 +224,8 @@
         {
           "src": "gallery-10.webp",
           "alt": {
-            "ru": "Фото салона «7 Небо»",
-            "en": "7 Nebo salon photo",
-            "hy": "",
-            "uz": "",
-            "tg": ""
-          }
-        },
-        {
-          "src": "gallery-11.webp",
-          "alt": {
-            "ru": "Фото салона «7 Небо»",
-            "en": "7 Nebo salon photo",
+            "ru": "Профессиональная косметика в салоне",
+            "en": "Professional salon products",
             "hy": "",
             "uz": "",
             "tg": ""
@@ -300,48 +234,8 @@
         {
           "src": "gallery-12.webp",
           "alt": {
-            "ru": "Фото салона «7 Небо»",
-            "en": "7 Nebo salon photo",
-            "hy": "",
-            "uz": "",
-            "tg": ""
-          }
-        },
-        {
-          "src": "gallery-13.webp",
-          "alt": {
-            "ru": "Фото салона «7 Небо»",
-            "en": "7 Nebo salon photo",
-            "hy": "",
-            "uz": "",
-            "tg": ""
-          }
-        },
-        {
-          "src": "gallery-14.webp",
-          "alt": {
-            "ru": "Фото салона «7 Небо»",
-            "en": "7 Nebo salon photo",
-            "hy": "",
-            "uz": "",
-            "tg": ""
-          }
-        },
-        {
-          "src": "gallery-15.webp",
-          "alt": {
-            "ru": "Фото салона «7 Небо»",
-            "en": "7 Nebo salon photo",
-            "hy": "",
-            "uz": "",
-            "tg": ""
-          }
-        },
-        {
-          "src": "gallery-16.webp",
-          "alt": {
-            "ru": "Фото салона «7 Небо»",
-            "en": "7 Nebo salon photo",
+            "ru": "Интерьер салона",
+            "en": "Salon interior",
             "hy": "",
             "uz": "",
             "tg": ""
@@ -350,8 +244,8 @@
         {
           "src": "gallery-17.webp",
           "alt": {
-            "ru": "Фото салона «7 Небо»",
-            "en": "7 Nebo salon photo",
+            "ru": "Кабинет салона",
+            "en": "Salon treatment room",
             "hy": "",
             "uz": "",
             "tg": ""
@@ -360,18 +254,8 @@
         {
           "src": "gallery-18.webp",
           "alt": {
-            "ru": "Фото салона «7 Небо»",
-            "en": "7 Nebo salon photo",
-            "hy": "",
-            "uz": "",
-            "tg": ""
-          }
-        },
-        {
-          "src": "gallery-19.webp",
-          "alt": {
-            "ru": "Фото салона «7 Небо»",
-            "en": "7 Nebo salon photo",
+            "ru": "Профессиональная косметика",
+            "en": "Professional products",
             "hy": "",
             "uz": "",
             "tg": ""
@@ -380,8 +264,8 @@
         {
           "src": "gallery-20.webp",
           "alt": {
-            "ru": "Фото салона «7 Небо»",
-            "en": "7 Nebo salon photo",
+            "ru": "Рабочая зона салона",
+            "en": "Salon work area",
             "hy": "",
             "uz": "",
             "tg": ""
@@ -390,8 +274,8 @@
         {
           "src": "gallery-21.webp",
           "alt": {
-            "ru": "Фото салона «7 Небо»",
-            "en": "7 Nebo salon photo",
+            "ru": "Кабинет салона",
+            "en": "Salon treatment room",
             "hy": "",
             "uz": "",
             "tg": ""
@@ -400,8 +284,8 @@
         {
           "src": "gallery-22.webp",
           "alt": {
-            "ru": "Фото салона «7 Небо»",
-            "en": "7 Nebo salon photo",
+            "ru": "Атмосфера салона",
+            "en": "Salon atmosphere",
             "hy": "",
             "uz": "",
             "tg": ""
@@ -410,18 +294,8 @@
         {
           "src": "gallery-23.webp",
           "alt": {
-            "ru": "Фото салона «7 Небо»",
-            "en": "7 Nebo salon photo",
-            "hy": "",
-            "uz": "",
-            "tg": ""
-          }
-        },
-        {
-          "src": "gallery-24.webp",
-          "alt": {
-            "ru": "Фото салона «7 Небо»",
-            "en": "7 Nebo salon photo",
+            "ru": "Профессиональная косметика в салоне",
+            "en": "Professional salon products",
             "hy": "",
             "uz": "",
             "tg": ""
@@ -430,8 +304,154 @@
         {
           "src": "gallery-25.webp",
           "alt": {
-            "ru": "Фото салона «7 Небо»",
-            "en": "7 Nebo salon photo",
+            "ru": "Профессиональная косметика в салоне",
+            "en": "Professional salon products",
+            "hy": "",
+            "uz": "",
+            "tg": ""
+          }
+        }
+      ],
+      "Волосы": [
+        {
+          "src": "gallery-01.webp",
+          "alt": {
+            "ru": "Окрашивание волос",
+            "en": "Hair coloring",
+            "hy": "",
+            "uz": "",
+            "tg": ""
+          }
+        },
+        {
+          "src": "gallery-02.webp",
+          "alt": {
+            "ru": "Мужская стрижка",
+            "en": "Men's haircut",
+            "hy": "",
+            "uz": "",
+            "tg": ""
+          }
+        },
+        {
+          "src": "gallery-03.webp",
+          "alt": {
+            "ru": "Окрашивание волос",
+            "en": "Hair coloring",
+            "hy": "",
+            "uz": "",
+            "tg": ""
+          }
+        },
+        {
+          "src": "gallery-04.webp",
+          "alt": {
+            "ru": "Укладка волос",
+            "en": "Hair styling",
+            "hy": "",
+            "uz": "",
+            "tg": ""
+          }
+        },
+        {
+          "src": "gallery-06.webp",
+          "alt": {
+            "ru": "Укладка волос",
+            "en": "Hair styling",
+            "hy": "",
+            "uz": "",
+            "tg": ""
+          }
+        },
+        {
+          "src": "gallery-09.webp",
+          "alt": {
+            "ru": "Окрашивание волос",
+            "en": "Hair coloring",
+            "hy": "",
+            "uz": "",
+            "tg": ""
+          }
+        },
+        {
+          "src": "gallery-11.webp",
+          "alt": {
+            "ru": "Окрашивание волос",
+            "en": "Hair coloring",
+            "hy": "",
+            "uz": "",
+            "tg": ""
+          }
+        },
+        {
+          "src": "gallery-15.webp",
+          "alt": {
+            "ru": "Окрашивание волос",
+            "en": "Hair coloring",
+            "hy": "",
+            "uz": "",
+            "tg": ""
+          }
+        },
+        {
+          "src": "gallery-16.webp",
+          "alt": {
+            "ru": "Работа с волосами",
+            "en": "Hair work",
+            "hy": "",
+            "uz": "",
+            "tg": ""
+          }
+        },
+        {
+          "src": "gallery-24.webp",
+          "alt": {
+            "ru": "Укладка волос",
+            "en": "Hair styling",
+            "hy": "",
+            "uz": "",
+            "tg": ""
+          }
+        }
+      ],
+      "Ногти": [
+        {
+          "src": "gallery-07.webp",
+          "alt": {
+            "ru": "Маникюр",
+            "en": "Manicure",
+            "hy": "",
+            "uz": "",
+            "tg": ""
+          }
+        },
+        {
+          "src": "gallery-13.webp",
+          "alt": {
+            "ru": "Маникюр",
+            "en": "Manicure",
+            "hy": "",
+            "uz": "",
+            "tg": ""
+          }
+        },
+        {
+          "src": "gallery-19.webp",
+          "alt": {
+            "ru": "Маникюр",
+            "en": "Manicure",
+            "hy": "",
+            "uz": "",
+            "tg": ""
+          }
+        }
+      ],
+      "Косметология": [
+        {
+          "src": "gallery-14.webp",
+          "alt": {
+            "ru": "Косметология",
+            "en": "Cosmetology",
             "hy": "",
             "uz": "",
             "tg": ""
@@ -440,7 +460,10 @@
       ]
     },
     "desktopGalleryLimits": {
-      "Салон": 9
+      "Салон": 9,
+      "Волосы": 9,
+      "Ногти": 3,
+      "Косметология": 1
     }
   },
   "categoryLabels": {
@@ -2093,7 +2116,191 @@
       "variants": []
     }
   ],
-  "team": [],
+  "team": [
+    {
+      "id": "goar",
+      "name": {
+        "ru": "Гоар",
+        "en": "Goar",
+        "hy": "",
+        "uz": "",
+        "tg": ""
+      },
+      "role": {
+        "ru": "ТОП-мастер",
+        "en": "Top specialist",
+        "hy": "",
+        "uz": "",
+        "tg": ""
+      },
+      "about": {
+        "ru": "Подробная информация о мастере пока не указана. Доступные услуги собраны по специализации.",
+        "en": "Detailed specialist information is not listed yet. Available services are grouped by specialty.",
+        "hy": "",
+        "uz": "",
+        "tg": ""
+      },
+      "categories": [
+        "Женский зал"
+      ],
+      "work": [],
+      "reviewIds": []
+    },
+    {
+      "id": "alina",
+      "name": {
+        "ru": "Алина",
+        "en": "Alina",
+        "hy": "",
+        "uz": "",
+        "tg": ""
+      },
+      "role": {
+        "ru": "Косметолог",
+        "en": "Cosmetologist",
+        "hy": "",
+        "uz": "",
+        "tg": ""
+      },
+      "about": {
+        "ru": "Подробная информация о мастере пока не указана. Доступные услуги собраны по специализации.",
+        "en": "Detailed specialist information is not listed yet. Available services are grouped by specialty.",
+        "hy": "",
+        "uz": "",
+        "tg": ""
+      },
+      "categories": [
+        "Косметология"
+      ],
+      "work": [],
+      "reviewIds": []
+    },
+    {
+      "id": "natalia-novopashennaya",
+      "name": {
+        "ru": "Новопашенная Наталья",
+        "en": "Natalia Novopashennaya",
+        "hy": "",
+        "uz": "",
+        "tg": ""
+      },
+      "role": {
+        "ru": "Мастер маникюра",
+        "en": "Manicurist",
+        "hy": "",
+        "uz": "",
+        "tg": ""
+      },
+      "about": {
+        "ru": "Подробная информация о мастере пока не указана. Доступные услуги собраны по специализации.",
+        "en": "Detailed specialist information is not listed yet. Available services are grouped by specialty.",
+        "hy": "",
+        "uz": "",
+        "tg": ""
+      },
+      "categories": [
+        "Ногтевой сервис"
+      ],
+      "work": [],
+      "reviewIds": [
+        "review-1",
+        "review-4",
+        "review-5"
+      ]
+    },
+    {
+      "id": "adel",
+      "name": {
+        "ru": "Адель",
+        "en": "Adel",
+        "hy": "",
+        "uz": "",
+        "tg": ""
+      },
+      "role": {
+        "ru": "ТОП-мастер",
+        "en": "Top specialist",
+        "hy": "",
+        "uz": "",
+        "tg": ""
+      },
+      "about": {
+        "ru": "Подробная информация о мастере пока не указана. Доступные услуги собраны по специализации.",
+        "en": "Detailed specialist information is not listed yet. Available services are grouped by specialty.",
+        "hy": "",
+        "uz": "",
+        "tg": ""
+      },
+      "categories": [
+        "Женский зал"
+      ],
+      "work": [],
+      "reviewIds": [
+        "review-7",
+        "review-9"
+      ]
+    },
+    {
+      "id": "zarina",
+      "name": {
+        "ru": "Зарина",
+        "en": "Zarina",
+        "hy": "",
+        "uz": "",
+        "tg": ""
+      },
+      "role": {
+        "ru": "Мастер ногтевого сервиса",
+        "en": "Nail specialist",
+        "hy": "",
+        "uz": "",
+        "tg": ""
+      },
+      "about": {
+        "ru": "Подробная информация о мастере пока не указана. Доступные услуги собраны по специализации.",
+        "en": "Detailed specialist information is not listed yet. Available services are grouped by specialty.",
+        "hy": "",
+        "uz": "",
+        "tg": ""
+      },
+      "categories": [
+        "Ногтевой сервис"
+      ],
+      "work": [],
+      "reviewIds": []
+    },
+    {
+      "id": "galina-merkulova",
+      "name": {
+        "ru": "Меркулова Галя",
+        "en": "Galina Merkulova",
+        "hy": "",
+        "uz": "",
+        "tg": ""
+      },
+      "role": {
+        "ru": "Мужской мастер",
+        "en": "Men's hair specialist",
+        "hy": "",
+        "uz": "",
+        "tg": ""
+      },
+      "about": {
+        "ru": "Подробная информация о мастере пока не указана. Доступные услуги собраны по специализации.",
+        "en": "Detailed specialist information is not listed yet. Available services are grouped by specialty.",
+        "hy": "",
+        "uz": "",
+        "tg": ""
+      },
+      "categories": [
+        "Женский зал"
+      ],
+      "work": [],
+      "reviewIds": [
+        "review-6"
+      ]
+    }
+  ],
   "reviews": [
     {
       "id": "review-1",
