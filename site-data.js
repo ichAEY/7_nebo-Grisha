@@ -2144,7 +2144,8 @@
         "Женский зал"
       ],
       "work": [],
-      "reviewIds": []
+      "reviewIds": [],
+      "photo": ""
     },
     {
       "id": "alina",
@@ -2173,7 +2174,8 @@
         "Косметология"
       ],
       "work": [],
-      "reviewIds": []
+      "reviewIds": [],
+      "photo": ""
     },
     {
       "id": "natalia-novopashennaya",
@@ -2206,7 +2208,8 @@
         "review-1",
         "review-4",
         "review-5"
-      ]
+      ],
+      "photo": ""
     },
     {
       "id": "adel",
@@ -2238,7 +2241,8 @@
       "reviewIds": [
         "review-7",
         "review-9"
-      ]
+      ],
+      "photo": ""
     },
     {
       "id": "zarina",
@@ -2267,7 +2271,8 @@
         "Ногтевой сервис"
       ],
       "work": [],
-      "reviewIds": []
+      "reviewIds": [],
+      "photo": ""
     },
     {
       "id": "galina-merkulova",
@@ -2298,7 +2303,8 @@
       "work": [],
       "reviewIds": [
         "review-6"
-      ]
+      ],
+      "photo": ""
     }
   ],
   "reviews": [
