@@ -69,16 +69,17 @@
     scope.querySelectorAll(selectors).forEach(node=>{
       if(node.querySelector('img'))return;
       const clean=String(name).trim();
-      if(node.textContent.trim()!==clean)return;
-      const rest=String(name).slice(1);
+      if(node.textContent.replace(/\s+/g,' ').trim()!==clean.replace(/\s+/g,' ').trim())return;
+      const rest=clean.replace(/^7\s*/u,'');
       const seven=document.createElement('span');
       seven.className='br-seven-align';
       seven.textContent='7';
-      seven.style.display='inline-block';
-      seven.style.transform='translateY(-0.20em)';
+      seven.style.position='relative';
+      seven.style.top='-0.14em';
       seven.style.font='inherit';
       seven.style.letterSpacing='inherit';
-      node.replaceChildren(seven,document.createTextNode(rest));
+      node.style.whiteSpace='nowrap';
+      node.replaceChildren(seven,document.createTextNode('\u00A0'+rest));
     });
   }
 
