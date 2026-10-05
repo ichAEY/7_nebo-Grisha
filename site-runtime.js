@@ -83,6 +83,8 @@
         lock.style.alignItems='baseline';
         lock.style.justifyContent='center';
         lock.style.whiteSpace='nowrap';
+        lock.style.transform='translateX(-0.25cm)';
+        seven.style.marginRight='-0.5cm';
         lock.replaceChildren(seven,document.createTextNode('\u00A0'+rest));
         node.replaceChildren(lock);
       }else{
