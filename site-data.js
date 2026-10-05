@@ -129,10 +129,10 @@
     "about": "profile.webp",
     "portfolio": [
       {
-        "src": "gallery-05.webp",
+        "src": "gallery-11.webp",
         "alt": {
-          "ru": "Интерьер салона",
-          "en": "Salon interior",
+          "ru": "Окрашивание волос",
+          "en": "Hair coloring",
           "hy": "",
           "uz": "",
           "tg": ""
