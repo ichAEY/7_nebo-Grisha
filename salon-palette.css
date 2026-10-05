@@ -438,3 +438,15 @@ html[data-br-device="mobile"] #salon-mobile .tn22-viewer .tn22-viewer-count{
     line-height:1.1!important;
   }
 }
+/* 7 Небо: keep one-line text and the same font; use its lining numeral for 7. */
+#salon-mobile .tn22-brand,
+#salon-mobile .tn22-title,
+#salon-mobile .tn22-master-brand,
+#salon-mobile .tn22-gallery-title span,
+#salon-desktop-v1 .std-header-brand-main,
+#salon-desktop-v1 .std-logo,
+#salon-desktop-v1 .dct-about-brand,
+#salon-desktop-v1 .std-master-page-top > span{
+  font-variant-numeric:lining-nums;
+  font-feature-settings:"lnum" 1;
+}

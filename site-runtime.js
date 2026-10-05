@@ -60,25 +60,6 @@
     });
   }
 
-  function liftLeadingSeven(scope,name){
-    if(!scope||!/^7(?:\s|$)/u.test(String(name||'')))return;
-    const selectors=[
-      '.std-header-brand-main','.std-logo','.dct-about-brand',
-      '.tn22-brand','.tn22-title','.tn22-master-brand','.tn22-gallery-title span'
-    ].join(',');
-    scope.querySelectorAll(selectors).forEach(node=>{
-      if(node.querySelector('img'))return;
-      if(node.textContent.trim()!==String(name).trim())return;
-      const rest=String(name).slice(1);
-      const seven=document.createElement('span');
-      seven.className='br-leading-seven';
-      seven.textContent='7';
-      seven.style.display='inline-block';
-      seven.style.transform='translateY(-0.14em)';
-      node.replaceChildren(seven,document.createTextNode(rest));
-    });
-  }
-
   function bookingItems(lang){
     const items=(data.contacts.booking||[]).map(item=>({...item}));
     if(data.contacts.phone&&!items.some(item=>item.type==='phone')){
@@ -359,7 +340,6 @@
     applyRatingAndReviews(lang);
     applyOptionalSections();
     replaceBrandTokens(document.body,name);
-    liftLeadingSeven(document.body,name);
     document.title=city?name+' — '+city:name;
     const description=document.querySelector('meta[name="description"]');
     if(description)description.setAttribute('content',text(data.salon.heroDescription,lang)||text(data.salon.about,lang));
