@@ -60,6 +60,26 @@
     });
   }
 
+  function alignLeadingSeven(scope,name){
+    if(!scope||!/^7(?:\s|$)/u.test(String(name||'')))return;
+    const selectors=['.std-header-brand-main','.std-logo','.dct-about-brand','.tn22-brand','.tn22-title','.tn22-master-brand','.tn22-gallery-title span'].join(',');
+    const clean=String(name).replace(/\s+/g,' ').trim();
+    const rest=clean.replace(/^7\s*/u,'');
+    scope.querySelectorAll(selectors).forEach(node=>{
+      if(node.querySelector('img'))return;
+      if(node.textContent.replace(/\s+/g,' ').trim()!==clean)return;
+      const seven=document.createElement('span');
+      seven.className='br-seven-optical';
+      seven.textContent='7';
+      seven.style.display='inline-block';
+      seven.style.transform='translateY(-0.22em)';
+      seven.style.font='inherit';
+      seven.style.letterSpacing='inherit';
+      node.style.whiteSpace='nowrap';
+      node.replaceChildren(seven,document.createTextNode('\u00A0'+rest));
+    });
+  }
+
   function bookingItems(lang){
     const items=(data.contacts.booking||[]).map(item=>({...item}));
     if(data.contacts.phone&&!items.some(item=>item.type==='phone')){
@@ -340,6 +360,7 @@
     applyRatingAndReviews(lang);
     applyOptionalSections();
     replaceBrandTokens(document.body,name);
+    alignLeadingSeven(document.body,name);
     document.title=city?name+' — '+city:name;
     const description=document.querySelector('meta[name="description"]');
     if(description)description.setAttribute('content',text(data.salon.heroDescription,lang)||text(data.salon.about,lang));
