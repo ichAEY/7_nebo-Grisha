@@ -50,7 +50,7 @@ html.br-booting #salon-mobile,html.br-booting #salon-desktop-v1{visibility:hidde
   const preload=document.createElement('link');
   preload.rel='preload';
   preload.as='style';
-  preload.href='mobile-overrides.css?v=7-nebo-20261005-v6';
+  preload.href='mobile-overrides.css?v=7-nebo-20261005-v7';
   const palettePreload=document.createElement('link');
   palettePreload.rel='preload';
   palettePreload.as='style';
@@ -128,7 +128,7 @@ html.br-booting #salon-mobile,html.br-booting #salon-desktop-v1{visibility:hidde
  script.src=desktop?'desktop.js?v=salon-20261003-v1':'mobile.js?v=salon-20261003-v2';
  script.async=false;script.onload=()=>{
    const runtime=document.createElement('script');
-   runtime.src='site-runtime.js?v=7-nebo-20261005-v2';
+   runtime.src='site-runtime.js?v=7-nebo-20261005-v3';
    runtime.async=false;runtime.onload=loaded;
    runtime.onerror=()=>{if(closed)error.classList.add('is-visible')};
    document.body.appendChild(runtime);
