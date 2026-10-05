@@ -450,3 +450,10 @@ html[data-br-device="mobile"] #salon-mobile .tn22-viewer .tn22-viewer-count{
   font-variant-numeric: lining-nums;
   font-feature-settings: "lnum" 1;
 }
+
+/* 7 Небо: keep the approved font, but optically lift only the leading 7. */
+#salon-desktop-v1 .br-leading-seven,
+#salon-mobile .br-leading-seven{
+  display:inline-block;
+  transform:translateY(-0.12em);
+}

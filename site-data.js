@@ -2120,8 +2120,8 @@
     {
       "id": "goar",
       "name": {
-        "ru": "Гоар",
-        "en": "Goar",
+        "ru": "Гуар",
+        "en": "Guar",
         "hy": "",
         "uz": "",
         "tg": ""
@@ -2180,8 +2180,8 @@
     {
       "id": "natalia-novopashennaya",
       "name": {
-        "ru": "Новопашенная Наталья",
-        "en": "Natalia Novopashennaya",
+        "ru": "Наталья",
+        "en": "Natalia",
         "hy": "",
         "uz": "",
         "tg": ""
@@ -2277,8 +2277,8 @@
     {
       "id": "galina-merkulova",
       "name": {
-        "ru": "Меркулова Галя",
-        "en": "Galina Merkulova",
+        "ru": "Галина",
+        "en": "Galina",
         "hy": "",
         "uz": "",
         "tg": ""
