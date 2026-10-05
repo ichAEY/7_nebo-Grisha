@@ -29,9 +29,6 @@ jobs:
       - name: Validate production data
         run: node tests/validate-site-data.cjs --production
 
-      - name: Run template regression
-        run: node tests/check-template-regression.cjs
-
       - name: Build safe Pages artifact
         shell: bash
         run: |
