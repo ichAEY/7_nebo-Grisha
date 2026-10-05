@@ -76,7 +76,18 @@
       seven.style.font='inherit';
       seven.style.letterSpacing='inherit';
       node.style.whiteSpace='nowrap';
-      node.replaceChildren(seven,document.createTextNode('\u00A0'+rest));
+      if(node.classList.contains('tn22-title')){
+        const lock=document.createElement('span');
+        lock.className='br-hero-title-lock';
+        lock.style.display='inline-flex';
+        lock.style.alignItems='baseline';
+        lock.style.justifyContent='center';
+        lock.style.whiteSpace='nowrap';
+        lock.replaceChildren(seven,document.createTextNode('\u00A0'+rest));
+        node.replaceChildren(lock);
+      }else{
+        node.replaceChildren(seven,document.createTextNode('\u00A0'+rest));
+      }
     });
   }
 
