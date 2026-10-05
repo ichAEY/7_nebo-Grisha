@@ -62,7 +62,7 @@
 
   function alignLeadingSeven(scope,name){
     if(!scope||!/^7(?:\s|$)/u.test(String(name||'')))return;
-    const selectors=['.std-logo','.tn22-title'].join(',');
+    const selectors=['.std-header-brand-main','.std-logo','.tn22-brand','.tn22-title'].join(',');
     const clean=String(name).replace(/\s+/g,' ').trim();
     const rest=clean.replace(/^7\s*/u,'');
     scope.querySelectorAll(selectors).forEach(node=>{
