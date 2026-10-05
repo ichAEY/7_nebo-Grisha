@@ -73,6 +73,8 @@
       const seven=document.createElement('span');
       seven.className='br-leading-seven';
       seven.textContent='7';
+      seven.style.display='inline-block';
+      seven.style.transform='translateY(-0.14em)';
       node.replaceChildren(seven,document.createTextNode(rest));
     });
   }
