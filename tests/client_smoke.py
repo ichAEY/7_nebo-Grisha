@@ -87,14 +87,23 @@ def check(browser, width, height, mobile, language):
     visible = page.locator("body").inner_text()
     assert not re.search(r"SALON NAME|(?:Услуга|Service)\s+\d{2}\b", visible), (
         "Demo labels remain visible on a production page")
-    # Google Maps embed can emit WebKit-only internal errors from its third-party
-    # frame. Keep the filter narrow so TANEM application errors still fail the run.
+    # Map embeds can emit WebKit-only internal frame errors from third-party
+    # providers. Keep the filter narrow so TANEM application errors still fail.
     google_maps_frame_noise = (
         'Could not load "search_impl".',
         'Could not load "util".',
         'maps.googleapis.com/maps/api/mapsjs/gen_204?csp_test=true due to access control checks.',
     )
-    app_errors = [error for error in errors if not any(token in error for token in google_maps_frame_noise)]
+    def known_map_noise(error):
+        if any(token in error for token in google_maps_frame_noise):
+            return True
+        return (
+            data.get("country") == "RU"
+            and "yandex.ru" in error
+            and "frame with origin" in error
+            and "Protocols must match" in error
+        )
+    app_errors = [error for error in errors if not known_map_noise(error)]
     assert not app_errors, f"JavaScript errors: {app_errors}"
     assert not failed_assets, f"Missing site assets: {failed_assets}"
     context.close()
@@ -108,10 +117,20 @@ def main():
     with sync_playwright() as playwright:
         browser = getattr(playwright, args.engine).launch(headless=True)
         try:
-            for case in [(1366, 900, False, "ru"), (1366, 900, False, "en"),
-                         (1366, 900, False, "hy"), (390, 844, True, "ru"),
-                         (390, 844, True, "en"), (390, 844, True, "hy"),
-                         (1180, 820, True, "ru")]:
+            probe_context = browser.new_context(locale="ru-RU")
+            probe_page = probe_context.new_page()
+            probe_page.goto(HOST, wait_until="domcontentloaded", timeout=30000)
+            data = probe_page.evaluate("window.TANEM_SITE_DATA")
+            locales = list(data.get("locales") or [data.get("defaultLocale", "ru")])
+            probe_context.close()
+
+            cases = []
+            for language in locales:
+                cases.append((1366, 900, False, language))
+            for language in locales:
+                cases.append((390, 844, True, language))
+            cases.append((1180, 820, True, data.get("defaultLocale", locales[0])))
+            for case in cases:
                 check(browser, *case)
         finally:
             browser.close()
