@@ -55,8 +55,11 @@ jobs:
             cp "$file" _site/
           done
           shopt -s nullglob
-          for file in hero.webp profile.webp gallery-*.webp team-*.webp logo.webp logo.png logo.svg; do
+          for file in hero.webp profile.webp gallery-*.webp team-*.webp; do
             cp "$file" _site/
+          done
+          for file in logo.webp logo.png logo.svg; do
+            if [ -f "$file" ]; then cp "$file" _site/; fi
           done
           touch _site/.nojekyll
 
