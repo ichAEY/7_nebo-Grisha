@@ -75,7 +75,7 @@
       seven.className='br-seven-align';
       seven.textContent='7';
       seven.style.position='relative';
-      seven.style.top='-0.14em';
+      seven.style.top='-0.04em';
       seven.style.font='inherit';
       seven.style.letterSpacing='inherit';
       node.style.whiteSpace='nowrap';
