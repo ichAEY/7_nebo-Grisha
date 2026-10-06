@@ -108,8 +108,8 @@ jobs:
             'test -s /var/www/7-nebo/index.html && test -s /var/www/7-nebo/site-data.js'
 
           curl --fail --silent --show-error --max-time 20 \
-            --resolve 7-nebo.tanem.ru:80:135.106.229.21 \
-            http://7-nebo.tanem.ru/site-data.js -o /tmp/7-nebo-origin.js
+            --resolve 7-nebo.tanem.ru:443:135.106.229.21 \
+            https://7-nebo.tanem.ru/site-data.js -o /tmp/7-nebo-origin.js
           grep -Fq '7 Небо' /tmp/7-nebo-origin.js
 
           redirect_url="$(curl --silent --show-error --max-time 20 \
