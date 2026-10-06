@@ -100,13 +100,26 @@ jobs:
             -e "ssh -i $HOME/.ssh/tanem_deploy -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes" \
             _site/ tanem-deploy@135.106.229.21:/var/www/7-nebo/
 
-      - name: Verify Selectel origin
+      - name: Verify Selectel origin and public HTTPS
         run: |
           set -euo pipefail
           ssh -i ~/.ssh/tanem_deploy -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes \
             tanem-deploy@135.106.229.21 \
             'test -s /var/www/7-nebo/index.html && test -s /var/www/7-nebo/site-data.js'
+
           curl --fail --silent --show-error --max-time 20 \
             --resolve 7-nebo.tanem.ru:80:135.106.229.21 \
-            http://7-nebo.tanem.ru/site-data.js -o /tmp/7-nebo-site-data.js
-          grep -Fq '7 Небо' /tmp/7-nebo-site-data.js
+            http://7-nebo.tanem.ru/site-data.js -o /tmp/7-nebo-origin.js
+          grep -Fq '7 Небо' /tmp/7-nebo-origin.js
+
+          redirect_url="$(curl --silent --show-error --max-time 20 \
+            -o /dev/null -w '%{redirect_url}' \
+            http://7-nebo.tanem.ru/)"
+          case "$redirect_url" in
+            https://7-nebo.tanem.ru/*) ;;
+            *) echo "::error::HTTP is not redirecting to HTTPS: $redirect_url"; exit 1 ;;
+          esac
+
+          curl --fail --silent --show-error --location --max-time 20 \
+            https://7-nebo.tanem.ru/site-data.js -o /tmp/7-nebo-public.js
+          grep -Fq '7 Небо' /tmp/7-nebo-public.js
